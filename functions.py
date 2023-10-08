@@ -86,6 +86,13 @@ def crear_barco_random(eslora):
         
         return barco_random
 
+def imprimir_tablero(tablero, tablero2):
+    print("ESte es tu tablero :")
+    print(tablero)
+    print("-"*100)
+    print("Este es el tablero de tu contrincante : ")
+    print(tablero2)
+
 def disparo_usuario():
     #Funcion para obtener mediente un input las coordenadas del disparo
     while True:
@@ -122,12 +129,6 @@ def crear_tablero(tamaño=(10,10)):
 def disparar(casilla, tablero,tablero2):
     #funcion que nos aplica el disparo obtenido y nos dice si es agua o tocado
 
-    print("ESte es tu tablero :")
-    print(tablero)
-    print("-"*100)
-    print("Este es el tablero de tu contrincante : ")
-    print(tablero2)
-        
           
     while True:
         # si el disparo es agua, pasa el turno. En caso de acertar, volveria a disparar
@@ -167,8 +168,7 @@ def turno_jugador (jugador,tablero,tablero2):
     
     x = disparo_usuario()
     disparar(x, tablero,tablero2)
-    print(tablero)
-    print(tablero2)
+    
     
 
 def turno_cpu (jugador, tablero,tablero2):
@@ -176,7 +176,7 @@ def turno_cpu (jugador, tablero,tablero2):
     print(f"Es el turno del jugador {jugador}")
     x = disparo_cpu()
     disparar(x, tablero,tablero2)
-    print(tablero)
+    
     
 
 def tablero_usuario(tablero1, tablero2) :

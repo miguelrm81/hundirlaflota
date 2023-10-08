@@ -32,18 +32,19 @@ tablero_2 = colocar_barco(barco_22, tablero_2)
 print(" EMPIEZA EL JUEGO!!! ")
 
 
-
+imprimir_tablero(tablero_1, tablero_4)
 turno_jugador(jugador_1, tablero_1,tablero_3)
-
+imprimir_tablero(tablero_2, tablero_3)
 turno_cpu (jugador_2, tablero_2,tablero_4)
-
+imprimir_tablero(tablero_1, tablero_4)
 turno_jugador(jugador_1, tablero_1,tablero_3)
-
+imprimir_tablero(tablero_2, tablero_3)
 turno_cpu (jugador_2, tablero_2,tablero_4)
-
+imprimir_tablero(tablero_1, tablero_4)
 turno_jugador(jugador_1, tablero_1,tablero_3)
-
+imprimir_tablero(tablero_2, tablero_3)
 turno_cpu (jugador_2, tablero_2,tablero_4)
+imprimir_tablero(tablero_1, tablero_4)
 
 
 
