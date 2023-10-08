@@ -35,15 +35,15 @@ print(" EMPIEZA EL JUEGO!!! ")
 
 turno_jugador(jugador_1, tablero_1,tablero_3)
 
-turno_cpu (jugador_2, tablero_2, tablero_4)
+turno_cpu (jugador_2, tablero_2,tablero_4)
 
-turno_jugador(jugador_1, tablero_1, tablero_3)
+turno_jugador(jugador_1, tablero_1,tablero_3)
 
 turno_cpu (jugador_2, tablero_2,tablero_4)
 
-turno_jugador(jugador_1, tablero_1, tablero_3)
+turno_jugador(jugador_1, tablero_1,tablero_3)
 
-turno_cpu (jugador_2, tablero_2, tablero_4)
+turno_cpu (jugador_2, tablero_2,tablero_4)
 
 
 

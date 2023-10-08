@@ -21,13 +21,12 @@ def intro(instrucciones) :
         print(instrucciones)
 
 def orientacion():
-    # Lista de letras disponibles
+    #funcion para obr¡tener la orientacion del barco
     letras = ["N", "S", "E", "O"]
 
     # Elegir una letra aleatoria
     letra_aleatoria = random.choice(letras)
 
-    # Imprimir la letra aleatoria
     return letra_aleatoria
 
 def colocar_barco(barco, tablero):
@@ -137,6 +136,7 @@ def disparar(casilla, tablero,tablero2):
             print("Agua")
             print("Has fallado, cambio de turno")
             tablero[casilla] = "-"
+            tablero2[casilla] = "-"
             
             break
         elif tablero[casilla] == "X":
@@ -146,11 +146,12 @@ def disparar(casilla, tablero,tablero2):
         else:
             print("Tocado")
             tablero[casilla] = "X"
+            tablero2[casilla] = "X"
             
             
             
             
-    return tablero, tablero2
+    return tablero, 
 
 def comparar_tablero(lista_barcos,barco) :
     #esta funcion la cree para intentar comparar los tableros e imprimir el tercer tablero en el que no nos salen los barcos
@@ -160,20 +161,21 @@ def comparar_tablero(lista_barcos,barco) :
                 return True
             else : 
                 return False
-def turno_jugador (jugador,tablero):
+def turno_jugador (jugador,tablero,tablero2):
     #define el turno del jugador, nos indica de quien es el turno, obtiene la coordenada y dispara
     print(f"Es el turno del jugador {jugador}")
     
     x = disparo_usuario()
-    disparar(x, tablero)
+    disparar(x, tablero,tablero2)
     print(tablero)
+    print(tablero2)
     
 
-def turno_cpu (jugador, tablero):
+def turno_cpu (jugador, tablero,tablero2):
     #define el turno de la CPU. En este caso se hace todo con el comando random
     print(f"Es el turno del jugador {jugador}")
     x = disparo_cpu()
-    disparar(x, tablero)
+    disparar(x, tablero,tablero2)
     print(tablero)
     
 
@@ -189,9 +191,10 @@ def tablero_usuario(tablero1, tablero2) :
 """
 def comparador_barco (tablero, barco)
     #esta funcion la usamos para ver si un barco esta dentro del tablero y repetir la operacion de generar barco
+    no funciona
     
     for casilla in barco:
-        if tablero(casilla) == barco(casilla) :
+        if tablero(casilla) == "O" :
             break
             
 """
@@ -207,5 +210,41 @@ entonces cada vez que disparara el usuario, se imprimiria a la vez en ambos tabl
 intente crear la variable vidas=20, para que cada vez que un usuario acertara, se le restara una vida. Teniendo en cuenta la cantidad
 de barcos en el tablero y la cantidad de sus casillas, iguale vidas a dicha cantidad. Pero cuando intente implementarlo, no me dejo
 contabilizar la variable vidas. Me decia que esa variable no existia 
+
+con esta funcion quise implementar para cada turno una posibilidad de parar la ejecucion
+def salida() :
+    salida = input("En caso de que quiera parar el juego escriba exit :")
+    salida = salida.lower()
+        if salida == "exit"
+            break
+intente tambien meter un segundo tablero en la funcion disparar de la siguiente manera
+def disparar(casilla, tablero,tablero2):
+    #funcion que nos aplica el disparo obtenido y nos dice si es agua o tocado
+
+    print("ESte es tu tablero :")
+    print(tablero)
+    print("-"*100)
+    print("Este es el tablero de tu contrincante : ")
+    print(tablero2)
+        
+          
+    while True:
+        # si el disparo es agua, pasa el turno. En caso de acertar, volveria a disparar
+    
+        if tablero[casilla] == " ":
+            print("Agua")
+            print("Has fallado, cambio de turno")
+            tablero[casilla] = "-"
+            tablero2[casilla] = "-"
+            
+            break
+        elif tablero[casilla] == "X":
+            print("El dispaso se ha repetido, vuelve a disparar")
+
+
+        else:
+            print("Tocado")
+            tablero[casilla] = "X"
+            tablero2[casilla] = "X"
 """
     

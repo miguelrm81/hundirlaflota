@@ -69,9 +69,9 @@ print(" EMPIEZA EL JUEGO!!! ")
 
 while vidas != 20 :
 
-    turno_jugador(jugador_1, tablero_1)
+    turno_jugador(jugador_1, tablero_1, tablero_3)
 
-    turno_cpu (jugador_2, tablero_1)
+    turno_cpu (jugador_2, tablero_2, tablero_4)
 
     vidas = vidas -1
 
