@@ -1,6 +1,6 @@
 import numpy as np
 import random
-from functionsmias import *
+from functions import *
 from variables import *
 
 print("Bienvenidos a mi demo del Hundir la flota!!!")

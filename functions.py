@@ -120,14 +120,14 @@ def crear_tablero(tamaño=(10,10)):
     #funcion que nos crea el tablero de 10x10
     return np.full(tamaño, " ")
 
-def disparar(casilla, tablero):
+def disparar(casilla, tablero,tablero2):
     #funcion que nos aplica el disparo obtenido y nos dice si es agua o tocado
 
     print("ESte es tu tablero :")
     print(tablero)
     print("-"*100)
     print("Este es el tablero de tu contrincante : ")
-    print(tablero)
+    print(tablero2)
         
           
     while True:
@@ -150,7 +150,7 @@ def disparar(casilla, tablero):
             
             
             
-    return tablero
+    return tablero, tablero2
 
 def comparar_tablero(lista_barcos,barco) :
     #esta funcion la cree para intentar comparar los tableros e imprimir el tercer tablero en el que no nos salen los barcos
